@@ -2,11 +2,26 @@ import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { posts } from '../data/posts';
 import { Clock, Tag, ChevronRight, User, Calendar, ArrowLeft, Share2, MessageCircle, TrendingUp, CheckCircle, ShieldCheck } from 'lucide-react';
-import { useMemo } from 'react';
+import { useMemo, useEffect } from 'react';
 
 export default function BlogPost() {
   const { slug } = useParams();
   const post = posts.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    if (post) {
+      document.title = `${post.title} | IncomePilot`;
+      const metaDescription = document.querySelector('meta[name="description"]');
+      if (metaDescription) {
+        metaDescription.setAttribute('content', post.excerpt);
+      } else {
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = post.excerpt;
+        document.head.appendChild(meta);
+      }
+    }
+  }, [post]);
 
   const relatedPosts = useMemo(() => {
     if (!post) return [];

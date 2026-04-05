@@ -1,6 +1,8 @@
 import { Link } from 'react-router-dom';
 import { posts } from '../data/posts';
 import PostCard from '../components/PostCard';
+import { motion } from 'motion/react';
+import { ArrowRight, Rocket, Briefcase, Bot, Smartphone, CheckCircle2, TrendingUp, ShieldCheck, Mail } from 'lucide-react';
 
 export default function Home() {
   // Section 3: Featured Articles (Top 3 for better focus)
@@ -26,21 +28,48 @@ export default function Home() {
       {/* SECTION 1 — HERO */}
       <section className="relative bg-primary text-white py-24 md:py-32 px-4 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 left-0 w-96 h-96 bg-accent rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-          <div className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full filter blur-3xl translate-x-1/2 translate-y-1/2"></div>
+          <motion.div 
+            animate={{ scale: [1, 1.2, 1], opacity: [0.1, 0.2, 0.1] }}
+            transition={{ duration: 10, repeat: Infinity }}
+            className="absolute top-0 left-0 w-96 h-96 bg-accent rounded-full filter blur-3xl -translate-x-1/2 -translate-y-1/2"
+          ></motion.div>
+          <motion.div 
+            animate={{ scale: [1, 1.3, 1], opacity: [0.1, 0.15, 0.1] }}
+            transition={{ duration: 12, repeat: Infinity, delay: 2 }}
+            className="absolute bottom-0 right-0 w-96 h-96 bg-secondary rounded-full filter blur-3xl translate-x-1/2 translate-y-1/2"
+          ></motion.div>
         </div>
         
         <div className="max-w-5xl mx-auto relative z-10 text-center">
-          <div className="inline-block bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-bold mb-6 border border-white/20">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-block bg-white/10 backdrop-blur-md px-4 py-1.5 rounded-full text-sm font-bold mb-6 border border-white/20"
+          >
             🚀 UPDATED FOR 2026
-          </div>
-          <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight">
+          </motion.div>
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.1 }}
+            className="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight"
+          >
             Start Making Money Online — Even With No Experience
-          </h1>
-          <p className="text-xl md:text-2xl mb-12 text-blue-100 max-w-3xl mx-auto leading-relaxed font-medium">
+          </motion.h1>
+          <motion.p 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2 }}
+            className="text-xl md:text-2xl mb-12 text-blue-100 max-w-3xl mx-auto leading-relaxed font-medium"
+          >
             Step-by-step guides, AI tools, freelancing strategies, and real methods that beginners can use today.
-          </p>
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12 text-sm font-bold text-blue-200 uppercase tracking-widest">
+          </motion.p>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.3 }}
+            className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12 text-sm font-bold text-blue-200 uppercase tracking-widest"
+          >
             <div className="flex items-center gap-2">
               <span className="text-accent">✓</span> Beginner-Friendly
             </div>
@@ -50,13 +79,18 @@ export default function Home() {
             <div className="flex items-center gap-2">
               <span className="text-accent">✓</span> Step-by-Step System
             </div>
-          </div>
-          <div className="flex flex-col sm:flex-row justify-center gap-5">
+          </motion.div>
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="flex flex-col sm:flex-row justify-center gap-5"
+          >
             <Link 
               to="/blog/how-to-make-money-online-for-beginners-with-no-experience" 
-              className="bg-accent text-white px-10 py-5 rounded-xl font-bold text-xl hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.4)] flex items-center justify-center gap-2"
+              className="group bg-accent text-white px-10 py-5 rounded-xl font-bold text-xl hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.4)] flex items-center justify-center gap-2"
             >
-              Start Here <span className="text-2xl">&rarr;</span>
+              Start Here <ArrowRight className="group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link 
               to="/blog" 
@@ -64,7 +98,7 @@ export default function Home() {
             >
               Explore Guides
             </Link>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -83,14 +117,30 @@ export default function Home() {
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Start Your Income Journey</h2>
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-[0.2em] text-sm mb-4"
+            >
+              <Rocket size={18} /> Start Your Journey
+            </motion.div>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Choose Your Income Path</h2>
             <p className="text-lg text-gray-600 font-medium">Pick a path and follow our step-by-step blueprints to go from zero to your first payout.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {/* Path 1: Freelancing Path */}
-            <div className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-primary group-hover:text-white transition-colors">💼</div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.1 }}
+              className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div className="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
+                <Briefcase size={40} />
+              </div>
               <h3 className="text-2xl font-bold mb-4">Freelancing Path</h3>
               <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Learn → First client. Master high-demand skills and land your first remote gig.</p>
               <Link 
@@ -99,11 +149,19 @@ export default function Home() {
               >
                 Start Freelancing
               </Link>
-            </div>
+            </motion.div>
             
             {/* Path 2: AI Income Path */}
-            <div className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="w-20 h-20 bg-amber-50 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-accent group-hover:text-white transition-colors">🤖</div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.2 }}
+              className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div className="w-20 h-20 bg-amber-50 rounded-2xl flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white transition-colors">
+                <Bot size={40} />
+              </div>
               <h3 className="text-2xl font-bold mb-4">AI Income Path</h3>
               <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Tools → Earn. Leverage ChatGPT and AI automation to create new income streams.</p>
               <Link 
@@ -112,11 +170,19 @@ export default function Home() {
               >
                 Explore AI Methods
               </Link>
-            </div>
+            </motion.div>
 
             {/* Path 3: Beginner Easy Methods */}
-            <div className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="w-20 h-20 bg-green-50 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-green-600 group-hover:text-white transition-colors">📱</div>
+            <motion.div 
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.3 }}
+              className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+            >
+              <div className="w-20 h-20 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 mb-8 group-hover:bg-green-600 group-hover:text-white transition-colors">
+                <Smartphone size={40} />
+              </div>
               <h3 className="text-2xl font-bold mb-4">Beginner Easy Methods</h3>
               <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Apps → Tasks. Simple ways to earn using your phone and basic online tasks.</p>
               <Link 
@@ -125,7 +191,7 @@ export default function Home() {
               >
                 Start Easy Methods
               </Link>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -233,7 +299,14 @@ export default function Home() {
         <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-extrabold mb-6 leading-tight">Why Thousands of Beginners Trust IncomePilot</h2>
+              <motion.h2 
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="text-4xl font-extrabold mb-6 leading-tight"
+              >
+                Why Thousands of Beginners Trust IncomePilot
+              </motion.h2>
               <p className="text-lg text-gray-600 mb-8 leading-relaxed font-medium">
                 We don't just share ideas; we provide actionable blueprints. Our mission is to make online income accessible to everyone, regardless of their background or budget.
               </p>
@@ -243,15 +316,29 @@ export default function Home() {
                   "No Experience or Technical Skills Required",
                   "Step-by-Step Actionable Tutorials",
                   "Updated for the 2026 Digital Economy"
-                ].map((item) => (
-                  <div key={item} className="flex items-center gap-3 font-bold text-gray-800">
-                    <div className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm">✓</div>
+                ].map((item, idx) => (
+                  <motion.div 
+                    key={item} 
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="flex items-center gap-3 font-bold text-gray-800"
+                  >
+                    <div className="w-6 h-6 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-sm">
+                      <CheckCircle2 size={14} />
+                    </div>
                     {item}
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </div>
-            <div className="bg-bg-light p-10 rounded-[3rem] border border-gray-100 relative">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              className="bg-bg-light p-10 rounded-[3rem] border border-gray-100 relative"
+            >
               <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent rounded-full flex items-center justify-center text-white text-4xl shadow-xl">🏆</div>
               <div className="space-y-8">
                 <div className="text-center">
@@ -267,7 +354,7 @@ export default function Home() {
                   <div className="text-gray-500 font-bold uppercase tracking-widest text-xs">Latest Strategies</div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>

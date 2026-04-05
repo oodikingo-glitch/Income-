@@ -113,83 +113,89 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SECTION 2 — START YOUR INCOME JOURNEY */}
-      <section className="py-24 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+      {/* SECTION 2 — START YOUR INCOME JOURNEY (START HERE) */}
+      <section className="py-24 px-4 bg-bg-light relative">
+        <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary to-transparent opacity-5"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
+          <div className="text-center max-w-4xl mx-auto mb-20">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-[0.2em] text-sm mb-4"
+              className="inline-flex items-center gap-3 bg-primary text-white px-6 py-2 rounded-full font-black uppercase tracking-[0.3em] text-sm mb-8 shadow-xl shadow-blue-900/20"
             >
-              <Rocket size={18} /> Start Your Journey
+              <Rocket size={20} className="animate-bounce" /> Start Here
             </motion.div>
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Choose Your Income Path</h2>
-            <p className="text-lg text-gray-600 font-medium">Pick a path and follow our step-by-step blueprints to go from zero to your first payout.</p>
+            <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tight text-gray-900">Choose Your Path to Freedom</h2>
+            <p className="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed">
+              Don't get overwhelmed. Pick <span className="text-primary font-black">ONE</span> path below and follow our verified, step-by-step blueprint to your first $1,000 online.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Path 1: Freelancing Path */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.1 }}
-              className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              transition={{ duration: 0.5 }}
+              className="group bg-white p-12 rounded-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 relative overflow-hidden"
             >
-              <div className="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:bg-primary group-hover:text-white transition-colors">
-                <Briefcase size={40} />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-blue-50 rounded-full translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="w-24 h-24 bg-blue-50 rounded-3xl flex items-center justify-center text-primary mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500 shadow-inner relative z-10">
+                <Briefcase size={48} />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Freelancing Path</h3>
-              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Learn → First client. Master high-demand skills and land your first remote gig.</p>
+              <h3 className="text-3xl font-black mb-6 relative z-10">Freelancing</h3>
+              <p className="text-gray-600 mb-10 flex-grow leading-relaxed text-lg relative z-10">Trade your skills for dollars. Best for those who want to reach <span className="font-bold text-gray-900">$2,000+/month</span> quickly.</p>
               <Link 
                 to="/blog/how-to-start-freelancing-with-no-experience" 
-                className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary transition-all w-full shadow-lg shadow-blue-900/20"
+                className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-secondary transition-all w-full shadow-xl shadow-blue-900/30 relative z-10 flex items-center justify-center gap-2 group/btn"
               >
-                Start Freelancing
+                Start Freelancing <ArrowRight className="group-hover/btn:translate-x-2 transition-transform" />
               </Link>
             </motion.div>
             
             {/* Path 2: AI Income Path */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.2 }}
-              className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="group bg-white p-12 rounded-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 relative overflow-hidden"
             >
-              <div className="w-20 h-20 bg-amber-50 rounded-2xl flex items-center justify-center text-accent mb-8 group-hover:bg-accent group-hover:text-white transition-colors">
-                <Bot size={40} />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-amber-50 rounded-full translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="w-24 h-24 bg-amber-50 rounded-3xl flex items-center justify-center text-accent mb-10 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-inner relative z-10">
+                <Bot size={48} />
               </div>
-              <h3 className="text-2xl font-bold mb-4">AI Income Path</h3>
-              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Tools → Earn. Leverage ChatGPT and AI automation to create new income streams.</p>
+              <h3 className="text-3xl font-black mb-6 relative z-10">AI Income</h3>
+              <p className="text-gray-600 mb-10 flex-grow leading-relaxed text-lg relative z-10">Leverage AI to do the work for you. Best for those who want to <span className="font-bold text-gray-900">work smarter</span>, not harder.</p>
               <Link 
                 to="/blog/how-to-make-money-using-ai-tools" 
-                className="bg-accent text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all w-full shadow-lg shadow-amber-600/20"
+                className="bg-accent text-white px-10 py-5 rounded-2xl font-black text-xl hover:scale-105 transition-all w-full shadow-xl shadow-amber-600/30 relative z-10 flex items-center justify-center gap-2 group/btn"
               >
-                Explore AI Methods
+                Explore AI <ArrowRight className="group-hover/btn:translate-x-2 transition-transform" />
               </Link>
             </motion.div>
-
+ 
             {/* Path 3: Beginner Easy Methods */}
             <motion.div 
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: 0.3 }}
-              className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="group bg-white p-12 rounded-[3rem] shadow-[0_20px_60px_rgba(0,0,0,0.06)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-4 transition-all duration-500 relative overflow-hidden"
             >
-              <div className="w-20 h-20 bg-green-50 rounded-2xl flex items-center justify-center text-green-600 mb-8 group-hover:bg-green-600 group-hover:text-white transition-colors">
-                <Smartphone size={40} />
+              <div className="absolute top-0 right-0 w-32 h-32 bg-green-50 rounded-full translate-x-16 -translate-y-16 group-hover:scale-150 transition-transform duration-700"></div>
+              <div className="w-24 h-24 bg-green-50 rounded-3xl flex items-center justify-center text-green-600 mb-10 group-hover:bg-green-600 group-hover:text-white transition-all duration-500 shadow-inner relative z-10">
+                <Smartphone size={48} />
               </div>
-              <h3 className="text-2xl font-bold mb-4">Beginner Easy Methods</h3>
-              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Apps → Tasks. Simple ways to earn using your phone and basic online tasks.</p>
+              <h3 className="text-3xl font-black mb-6 relative z-10">Easy Methods</h3>
+              <p className="text-gray-600 mb-10 flex-grow leading-relaxed text-lg relative z-10">Simple tasks using your phone. Best for <span className="font-bold text-gray-900">absolute beginners</span> who want a quick win.</p>
               <Link 
                 to="/blog/make-money-using-phone" 
-                className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all w-full shadow-lg shadow-green-900/20"
+                className="bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-green-700 transition-all w-full shadow-xl shadow-green-900/30 relative z-10 flex items-center justify-center gap-2 group/btn"
               >
-                Start Easy Methods
+                Start Now <ArrowRight className="group-hover/btn:translate-x-2 transition-transform" />
               </Link>
             </motion.div>
           </div>

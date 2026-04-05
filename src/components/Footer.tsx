@@ -11,10 +11,12 @@ export default function Footer() {
         </div>
         <p className="text-gray-600">&copy; 2026 IncomePilot. All rights reserved.</p>
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <Link to="/about" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm">About</Link>
-          <Link to="/contact" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm">Contact</Link>
-          <Link to="/privacy-policy" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm">Privacy Policy</Link>
-          <Link to="/disclaimer" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-blue-400 hover:text-blue-600 transition-all shadow-sm">Disclaimer</Link>
+          <Link to="/about" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary hover:text-primary transition-all shadow-sm">About</Link>
+          <Link to="/contact" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary hover:text-primary transition-all shadow-sm">Contact</Link>
+          <Link to="/privacy-policy" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary hover:text-primary transition-all shadow-sm">Privacy Policy</Link>
+          <Link to="/terms-of-service" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary hover:text-primary transition-all shadow-sm">Terms of Service</Link>
+          <Link to="/disclaimer" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary hover:text-primary transition-all shadow-sm">Disclaimer</Link>
+          <Link to="/cookie-policy" className="px-5 py-2.5 bg-white border border-gray-300 rounded-lg text-sm font-semibold text-gray-700 hover:bg-gray-50 hover:border-primary hover:text-primary transition-all shadow-sm">Cookie Policy</Link>
         </div>
       </div>
     </footer>

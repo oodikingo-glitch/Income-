@@ -11,9 +11,11 @@ export default function Header() {
           </div>
           <span className="tracking-tight">IncomePilot</span>
         </Link>
-        <div className="space-x-6 text-gray-700">
-          <Link to="/" className="hover:text-blue-600 font-medium transition-colors">Home</Link>
-          <Link to="/blog" className="hover:text-blue-600 font-medium transition-colors">Blog</Link>
+        <div className="hidden md:flex space-x-8 text-gray-700">
+          <Link to="/" className="hover:text-primary font-bold transition-colors">Home</Link>
+          <Link to="/blog/how-to-make-money-online-for-beginners-with-no-experience" className="hover:text-primary font-bold transition-colors">Start Here</Link>
+          <Link to="/blog" className="hover:text-primary font-bold transition-colors">Best Guides</Link>
+          <Link to="/blog/how-to-earn-money-online-step-by-step" className="hover:text-primary font-bold transition-colors">Income Paths</Link>
         </div>
       </nav>
     </header>

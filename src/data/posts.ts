@@ -6,6 +6,8 @@ export interface Post {
   imageSeed: string;
   category: 'foundation' | 'freelancing' | 'ai' | 'apps' | 'blogging' | 'seo';
   order: number;
+  readTime: string;
+  tags: string[];
 }
 
 export const posts: Post[] = [
@@ -169,7 +171,9 @@ It depends on consistency, usually a few weeks to months.
     `,
     imageSeed: 'money',
     category: 'foundation',
-    order: 1
+    order: 1,
+    readTime: '8 min read',
+    tags: ['Beginner', 'Guide', '2026']
   },
   { 
     slug: 'how-to-earn-money-online-step-by-step', 
@@ -310,7 +314,9 @@ Now that you know the blueprint, it is time to choose your path. If you have no 
 `, 
     imageSeed: 'steps', 
     category: 'foundation', 
-    order: 2 
+    order: 2,
+    readTime: '6 min read',
+    tags: ['Blueprint', 'Strategy']
   },
   { 
     slug: 'easy-online-jobs-without-investment', 
@@ -457,7 +463,9 @@ Ready to start offering these services? Learn how to set up your profile and get
 `, 
     imageSeed: 'jobs', 
     category: 'foundation', 
-    order: 3 
+    order: 3,
+    readTime: '5 min read',
+    tags: ['No Investment', 'Jobs']
   },
   { 
     slug: 'make-money-using-phone', 
@@ -588,7 +596,9 @@ Ready to start offering services from your phone? Learn how to set up your profi
 `, 
     imageSeed: 'phone', 
     category: 'foundation', 
-    order: 4 
+    order: 4,
+    readTime: '7 min read',
+    tags: ['Mobile', 'Apps']
   },
   { 
     slug: 'best-ways-to-make-money-online-2026', 
@@ -708,7 +718,9 @@ If you want to start earning quickly, freelancing is the best path. Read our com
 `, 
     imageSeed: 'best', 
     category: 'foundation', 
-    order: 5 
+    order: 5,
+    readTime: '10 min read',
+    tags: ['Best Ways', 'Passive Income']
   },
   // Freelancing (6-10)
   { 
@@ -844,7 +856,9 @@ Ready to set up your profile? Read our step-by-step guide on [Fiverr for Beginne
 `, 
     imageSeed: 'freelance', 
     category: 'freelancing', 
-    order: 1 
+    order: 1,
+    readTime: '9 min read',
+    tags: ['Freelancing', 'No Experience']
   },
   { 
     slug: 'freelance-skills-for-beginners', 
@@ -983,7 +997,9 @@ Now that you have chosen a skill, it is time to set up your profile. Read our gu
 `, 
     imageSeed: 'skills', 
     category: 'freelancing', 
-    order: 2 
+    order: 2,
+    readTime: '7 min read',
+    tags: ['Freelancing', 'Skills', 'Beginner']
   },
   { 
     slug: 'fiverr-for-beginners', 
@@ -1090,7 +1106,9 @@ Now that your profile is set up, you need to know how to handle your first clien
 `, 
     imageSeed: 'fiverr', 
     category: 'freelancing', 
-    order: 3 
+    order: 3,
+    readTime: '10 min read',
+    tags: ['Fiverr', 'Gig Setup', 'Freelancing']
   },
   { 
     slug: 'easy-freelance-jobs-from-home', 
@@ -1223,7 +1241,9 @@ Ready to find your first client? Read our step-by-step guide on [How to Get Your
 `, 
     imageSeed: 'easy', 
     category: 'freelancing', 
-    order: 4 
+    order: 4,
+    readTime: '6 min read',
+    tags: ['Remote Work', 'Easy Jobs', 'No Experience']
   },
   { 
     slug: 'how-to-get-first-freelance-client', 
@@ -1339,7 +1359,9 @@ Now that you know how to get clients, you might want to learn how to do the work
 `, 
     imageSeed: 'client', 
     category: 'freelancing', 
-    order: 5 
+    order: 5,
+    readTime: '12 min read',
+    tags: ['Clients', 'Strategy', 'Freelancing']
   },
   // AI Section (11-15)
   { 
@@ -1394,7 +1416,9 @@ Ready to start? Check out our guide on [How Beginners Can Use ChatGPT to Make Mo
 `, 
     imageSeed: 'ai', 
     category: 'ai', 
-    order: 1 
+    order: 1,
+    readTime: '7 min read',
+    tags: ['AI', 'ChatGPT', 'Tools']
   },
   { 
     slug: 'ai-writing-for-money', 
@@ -1445,7 +1469,9 @@ Ready to start? Check out our guide on [Best Free AI Tools That Help You Earn Mo
 `, 
     imageSeed: 'writing', 
     category: 'ai', 
-    order: 2 
+    order: 2,
+    readTime: '5 min read',
+    tags: ['AI Writing', 'ChatGPT']
   },
   { 
     slug: 'ai-design-for-income', 
@@ -1489,7 +1515,9 @@ Ready to start? Check out our guide on [Easy AI Side Hustles for Beginners With 
 `, 
     imageSeed: 'design', 
     category: 'ai', 
-    order: 3 
+    order: 3,
+    readTime: '6 min read',
+    tags: ['AI Design', 'Canva']
   },
   { 
     slug: 'ai-side-hustles', 
@@ -1533,7 +1561,9 @@ Ready to start? Check out our guide on [How to Start AI Freelancing With No Expe
 `, 
     imageSeed: 'sidehustle', 
     category: 'ai', 
-    order: 14 
+    order: 14,
+    readTime: '4 min read',
+    tags: ['Side Hustle', 'AI']
   },
   { 
     slug: 'how-to-start-ai-freelancing', 
@@ -1582,7 +1612,9 @@ Ready to start? Check out our guide on [How to Make Money Using AI Tools](/blog/
 `, 
     imageSeed: 'ai-freelance', 
     category: 'ai', 
-    order: 15 
+    order: 15,
+    readTime: '8 min read',
+    tags: ['AI Freelancing', 'Guide']
   },
   // Apps Section (16-19)
   { 
@@ -1630,7 +1662,9 @@ Want to start earning from your phone? Read our guide on [Easy Apps That Pay You
 `, 
     imageSeed: 'money-apps', 
     category: 'apps', 
-    order: 16 
+    order: 16,
+    readTime: '6 min read',
+    tags: ['Apps', 'Mobile Income']
   },
   { 
     slug: 'survey-apps-that-pay', 
@@ -1671,7 +1705,9 @@ Looking for more ways to earn? Check out [How to Earn Money Watching Videos Onli
 `, 
     imageSeed: 'phone-apps', 
     category: 'apps', 
-    order: 17 
+    order: 17,
+    readTime: '5 min read',
+    tags: ['Surveys', 'Apps']
   },
   { 
     slug: 'microtask-apps-guide', 
@@ -1822,7 +1858,9 @@ Ready to start a bigger project? Check out [How to Start a Blog and Make Money a
  
      imageSeed: 'mobile', 
     category: 'apps', 
-    order: 4 
+    order: 4,
+    readTime: '7 min read',
+    tags: ['Microtasks', 'Videos']
   },
   // Blogging (20)
   { 
@@ -1872,6 +1910,8 @@ Ready to explore other options? Check out [Best Ways to Make Money Online in 202
 `, 
     imageSeed: 'blogging', 
     category: 'blogging', 
-    order: 20 
+    order: 20,
+    readTime: '12 min read',
+    tags: ['Blogging', 'Passive Income']
   }
 ];

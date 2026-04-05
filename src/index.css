@@ -1,14 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #1E3A8A;
-  --color-accent: #22C55E;
-  --color-text-main: #1F2937;
-  --color-bg-light: #F3F4F6;
+  --color-primary: #1F3A93;
+  --color-secondary: #2563EB;
+  --color-accent: #F59E0B;
+  --color-text-main: #111827;
+  --color-bg-light: #F8FAFC;
 }
 
 @layer base {
   body {
-    @apply text-text-main bg-white;
+    @apply text-text-main bg-bg-light font-sans antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight text-text-main;
   }
 }

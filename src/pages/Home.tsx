@@ -35,23 +35,34 @@ export default function Home() {
             🚀 UPDATED FOR 2026
           </div>
           <h1 className="text-5xl md:text-7xl font-extrabold mb-8 leading-[1.1] tracking-tight">
-            Learn Proven Online Income Methods That Work in 2026
+            Start Making Money Online — Even With No Experience
           </h1>
           <p className="text-xl md:text-2xl mb-12 text-blue-100 max-w-3xl mx-auto leading-relaxed font-medium">
-            Step-by-step guides, AI strategies, and freelancing systems designed specifically for beginners. No experience? No problem.
+            Step-by-step guides, AI tools, freelancing strategies, and real methods that beginners can use today.
           </p>
+          <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-12 text-sm font-bold text-blue-200 uppercase tracking-widest">
+            <div className="flex items-center gap-2">
+              <span className="text-accent">✓</span> Beginner-Friendly
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-accent">✓</span> No Experience Required
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-accent">✓</span> Step-by-Step System
+            </div>
+          </div>
           <div className="flex flex-col sm:flex-row justify-center gap-5">
             <Link 
               to="/blog/how-to-make-money-online-for-beginners-with-no-experience" 
               className="bg-accent text-white px-10 py-5 rounded-xl font-bold text-xl hover:scale-105 transition-all shadow-[0_0_20px_rgba(245,158,11,0.4)] flex items-center justify-center gap-2"
             >
-              Start Beginner's Path <span className="text-2xl">&rarr;</span>
+              Start Here <span className="text-2xl">&rarr;</span>
             </Link>
             <Link 
               to="/blog" 
               className="bg-white/10 backdrop-blur-md text-white border-2 border-white/30 px-10 py-5 rounded-xl font-bold text-xl hover:bg-white/20 transition-all flex items-center justify-center"
             >
-              See Top 10 Guides
+              Explore Guides
             </Link>
           </div>
         </div>
@@ -68,20 +79,20 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SECTION 2 — 3 PATH SYSTEM */}
+      {/* SECTION 2 — START YOUR INCOME JOURNEY */}
       <section className="py-24 px-4 bg-white">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Choose Your Income Path</h2>
-            <p className="text-lg text-gray-600 font-medium">We've categorized the best ways to earn online into three clear paths. Pick the one that fits your goals.</p>
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Start Your Income Journey</h2>
+            <p className="text-lg text-gray-600 font-medium">Pick a path and follow our step-by-step blueprints to go from zero to your first payout.</p>
           </div>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
-            {/* Path 1: Freelancing */}
+            {/* Path 1: Freelancing Path */}
             <div className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
               <div className="w-20 h-20 bg-blue-50 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-primary group-hover:text-white transition-colors">💼</div>
-              <h3 className="text-2xl font-bold mb-4">Freelancing</h3>
-              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Work online and get paid for simple tasks like writing, design, or data entry. Best for fast cash.</p>
+              <h3 className="text-2xl font-bold mb-4">Freelancing Path</h3>
+              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Learn → First client. Master high-demand skills and land your first remote gig.</p>
               <Link 
                 to="/blog/how-to-start-freelancing-with-no-experience" 
                 className="bg-primary text-white px-8 py-4 rounded-xl font-bold hover:bg-secondary transition-all w-full shadow-lg shadow-blue-900/20"
@@ -90,11 +101,11 @@ export default function Home() {
               </Link>
             </div>
             
-            {/* Path 2: AI Income */}
+            {/* Path 2: AI Income Path */}
             <div className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
               <div className="w-20 h-20 bg-amber-50 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-accent group-hover:text-white transition-colors">🤖</div>
-              <h3 className="text-2xl font-bold mb-4">AI Income</h3>
-              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Leverage ChatGPT and modern AI tools to automate work and create new income streams. The 2026 trend.</p>
+              <h3 className="text-2xl font-bold mb-4">AI Income Path</h3>
+              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Tools → Earn. Leverage ChatGPT and AI automation to create new income streams.</p>
               <Link 
                 to="/blog/how-to-make-money-using-ai-tools" 
                 className="bg-accent text-white px-8 py-4 rounded-xl font-bold hover:scale-105 transition-all w-full shadow-lg shadow-amber-600/20"
@@ -103,16 +114,16 @@ export default function Home() {
               </Link>
             </div>
 
-            {/* Path 3: Passive Income */}
+            {/* Path 3: Beginner Easy Methods */}
             <div className="group bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.04)] border border-gray-100 flex flex-col items-center text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-300">
-              <div className="w-20 h-20 bg-green-50 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-green-600 group-hover:text-white transition-colors">📈</div>
-              <h3 className="text-2xl font-bold mb-4">Passive Income</h3>
-              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Build assets like blogs or niche sites that earn money while you sleep. Best for long-term wealth.</p>
+              <div className="w-20 h-20 bg-green-50 rounded-2xl flex items-center justify-center text-4xl mb-8 group-hover:bg-green-600 group-hover:text-white transition-colors">📱</div>
+              <h3 className="text-2xl font-bold mb-4">Beginner Easy Methods</h3>
+              <p className="text-gray-600 mb-8 flex-grow leading-relaxed">Start → Apps → Tasks. Simple ways to earn using your phone and basic online tasks.</p>
               <Link 
-                to="/blog/how-to-start-a-blog-and-make-money" 
+                to="/blog/make-money-using-phone" 
                 className="bg-green-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-green-700 transition-all w-full shadow-lg shadow-green-900/20"
               >
-                Build Passive Income
+                Start Easy Methods
               </Link>
             </div>
           </div>
@@ -120,18 +131,18 @@ export default function Home() {
       </section>
 
       {/* SECTION 3 — FEATURED ARTICLES */}
-      <section className="py-24 px-4 bg-bg-light">
+      <section className="py-32 px-4 bg-bg-light">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+          <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
             <div className="max-w-2xl">
-              <h2 className="text-4xl font-extrabold mb-4">Featured Guides</h2>
+              <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Expert-Verified Blueprints</h2>
               <p className="text-lg text-gray-600 font-medium">Our most comprehensive, step-by-step tutorials to get you started today.</p>
             </div>
-            <Link to="/blog" className="text-primary font-bold flex items-center gap-2 hover:gap-3 transition-all">
-              View All Articles <span>&rarr;</span>
+            <Link to="/blog" className="text-primary font-black flex items-center gap-2 hover:gap-4 transition-all text-lg">
+              View All 50+ Guides <span>&rarr;</span>
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
             {featuredPosts.map((post) => (
               <PostCard key={post.slug} post={post} />
             ))}
@@ -140,49 +151,49 @@ export default function Home() {
       </section>
 
       {/* SECTION 4 — STEP-BY-STEP ROADMAP */}
-      <section className="py-24 px-4 bg-white">
+      <section className="py-32 px-4 bg-white">
         <div className="max-w-5xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-extrabold mb-4">Your Roadmap to $1,000/Month</h2>
+          <div className="text-center mb-20">
+            <h2 className="text-4xl md:text-5xl font-extrabold mb-6">Your Roadmap to $1,000/Month</h2>
             <p className="text-lg text-gray-600 font-medium">Follow this exact sequence to go from zero to a stable online income.</p>
           </div>
           
-          <div className="relative space-y-12">
+          <div className="relative space-y-16">
             <div className="absolute left-8 top-0 bottom-0 w-1 bg-gray-100 hidden md:block"></div>
             
-            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
-              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0">1</div>
-              <Link to="/blog/how-to-make-money-online-for-beginners-with-no-experience" className="flex-grow p-8 bg-bg-light rounded-3xl border border-gray-100 hover:border-primary hover:bg-white hover:shadow-xl transition-all group/card">
-                <h3 className="text-2xl font-bold mb-2 group-hover/card:text-primary transition-colors">Master the Foundations</h3>
-                <p className="text-gray-600 leading-relaxed">Understand the online economy and set up your digital workspace for success.</p>
+            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-10 group">
+              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0 group-hover:scale-110 transition-transform">1</div>
+              <Link to="/blog/how-to-make-money-online-for-beginners-with-no-experience" className="flex-grow p-10 bg-bg-light rounded-[2.5rem] border border-gray-100 hover:border-primary hover:bg-white hover:shadow-2xl transition-all group/card">
+                <h3 className="text-2xl font-black mb-3 group-hover/card:text-primary transition-colors">Master the Foundations</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">Understand the online economy and set up your digital workspace for success.</p>
               </Link>
             </div>
 
-            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
-              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0">2</div>
-              <div className="flex-grow p-8 bg-bg-light rounded-3xl border border-gray-100">
-                <h3 className="text-2xl font-bold mb-4">Choose Your Primary Vehicle</h3>
+            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-10 group">
+              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0 group-hover:scale-110 transition-transform">2</div>
+              <div className="flex-grow p-10 bg-bg-light rounded-[2.5rem] border border-gray-100">
+                <h3 className="text-2xl font-black mb-6">Choose Your Primary Vehicle</h3>
                 <div className="flex flex-wrap gap-4">
-                  <Link to="/blog/how-to-start-freelancing-with-no-experience" className="px-5 py-2 bg-white rounded-xl border border-gray-200 hover:border-primary hover:text-primary font-bold transition-all shadow-sm">Freelancing</Link>
-                  <Link to="/blog/how-to-make-money-using-ai-tools" className="px-5 py-2 bg-white rounded-xl border border-gray-200 hover:border-primary hover:text-primary font-bold transition-all shadow-sm">AI Tools</Link>
-                  <Link to="/blog/best-apps-to-make-money-online" className="px-5 py-2 bg-white rounded-xl border border-gray-200 hover:border-primary hover:text-primary font-bold transition-all shadow-sm">Mobile Apps</Link>
+                  <Link to="/blog/how-to-start-freelancing-with-no-experience" className="px-8 py-3 bg-white rounded-2xl border border-gray-200 hover:border-primary hover:text-primary font-black transition-all shadow-sm hover:shadow-md">Freelancing</Link>
+                  <Link to="/blog/how-to-make-money-using-ai-tools" className="px-8 py-3 bg-white rounded-2xl border border-gray-200 hover:border-primary hover:text-primary font-black transition-all shadow-sm hover:shadow-md">AI Tools</Link>
+                  <Link to="/blog/make-money-using-phone" className="px-8 py-3 bg-white rounded-2xl border border-gray-200 hover:border-primary hover:text-primary font-black transition-all shadow-sm hover:shadow-md">Mobile Apps</Link>
                 </div>
               </div>
             </div>
 
-            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
-              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0">3</div>
-              <Link to="/blog/how-to-get-first-freelance-client" className="flex-grow p-8 bg-bg-light rounded-3xl border border-gray-100 hover:border-primary hover:bg-white hover:shadow-xl transition-all group/card">
-                <h3 className="text-2xl font-bold mb-2 group-hover/card:text-primary transition-colors">Land Your First Payout</h3>
-                <p className="text-gray-600 leading-relaxed">Use our proven templates to get your first client or complete your first high-paying task.</p>
+            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-10 group">
+              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0 group-hover:scale-110 transition-transform">3</div>
+              <Link to="/blog/how-to-get-first-freelance-client" className="flex-grow p-10 bg-bg-light rounded-[2.5rem] border border-gray-100 hover:border-primary hover:bg-white hover:shadow-2xl transition-all group/card">
+                <h3 className="text-2xl font-black mb-3 group-hover/card:text-primary transition-colors">Land Your First Payout</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">Use our proven templates to get your first client or complete your first high-paying task.</p>
               </Link>
             </div>
 
-            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-8 group">
-              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0">4</div>
-              <Link to="/blog/how-to-start-a-blog-and-make-money" className="flex-grow p-8 bg-bg-light rounded-3xl border border-gray-100 hover:border-primary hover:bg-white hover:shadow-xl transition-all group/card">
-                <h3 className="text-2xl font-bold mb-2 group-hover/card:text-primary transition-colors">Scale to Passive Income</h3>
-                <p className="text-gray-600 leading-relaxed">Reinvest your earnings into long-term assets like blogging and affiliate marketing.</p>
+            <div className="relative flex flex-col md:flex-row items-start md:items-center gap-10 group">
+              <div className="w-16 h-16 bg-primary text-white rounded-2xl flex items-center justify-center text-2xl font-bold z-10 shadow-xl shadow-blue-900/20 shrink-0 group-hover:scale-110 transition-transform">4</div>
+              <Link to="/blog/how-to-start-a-blog-and-make-money" className="flex-grow p-10 bg-bg-light rounded-[2.5rem] border border-gray-100 hover:border-primary hover:bg-white hover:shadow-2xl transition-all group/card">
+                <h3 className="text-2xl font-black mb-3 group-hover/card:text-primary transition-colors">Scale to Passive Income</h3>
+                <p className="text-gray-600 leading-relaxed text-lg">Reinvest your earnings into long-term assets like blogging and affiliate marketing.</p>
               </Link>
             </div>
           </div>

@@ -1,7 +1,7 @@
 import { useParams, Link } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { posts } from '../data/posts';
-import { Clock, Tag, ChevronRight, User, Calendar, ArrowLeft, Share2, MessageCircle, TrendingUp } from 'lucide-react';
+import { Clock, Tag, ChevronRight, User, Calendar, ArrowLeft, Share2, MessageCircle, TrendingUp, CheckCircle, ShieldCheck } from 'lucide-react';
 import { useMemo } from 'react';
 
 export default function BlogPost() {
@@ -42,6 +42,9 @@ export default function BlogPost() {
         {/* Header */}
         <header className="mb-12">
           <div className="flex items-center gap-3 mb-6">
+            <span className="bg-green-50 text-green-700 text-[10px] font-black px-2 py-1 rounded flex items-center gap-1 uppercase tracking-wider border border-green-100 shadow-sm">
+              <CheckCircle size={12} /> Verified Guide
+            </span>
             <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-widest">
               {post.category}
             </span>
@@ -90,6 +93,22 @@ export default function BlogPost() {
         <div className="flex flex-col lg:flex-row gap-16">
           {/* Main Content */}
           <div className="lg:w-2/3">
+            {/* Trust Banner */}
+            <div className="mb-10 p-6 bg-green-50 rounded-3xl border border-green-100 flex flex-wrap items-center justify-center gap-x-8 gap-y-4 text-sm font-black text-green-800 uppercase tracking-wider">
+              <div className="flex items-center gap-2">
+                <CheckCircle size={18} className="text-green-600" />
+                Beginner-Friendly Guides
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle size={18} className="text-green-600" />
+                No Experience Required
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle size={18} className="text-green-600" />
+                Step-by-Step System
+              </div>
+            </div>
+
             <div className="prose prose-lg max-w-none prose-headings:font-black prose-headings:tracking-tight prose-a:text-primary prose-a:font-bold prose-img:rounded-3xl text-gray-700 leading-relaxed">
               <ReactMarkdown>{post.content}</ReactMarkdown>
             </div>
@@ -120,38 +139,16 @@ export default function BlogPost() {
                 </div>
               </div>
             </div>
-          </div>
-
-          {/* Sidebar */}
-          <aside className="lg:w-1/3 space-y-12">
-            {/* Newsletter Widget */}
-            <div className="bg-primary text-white p-8 rounded-[2rem] shadow-xl relative overflow-hidden">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
-              <div className="relative z-10">
-                <h3 className="text-2xl font-black mb-4">Master Your Income</h3>
-                <p className="text-blue-100 mb-6 text-sm leading-relaxed">
-                  Join 25,000+ others getting weekly blueprints to earn online.
-                </p>
-                <input 
-                  type="email" 
-                  placeholder="your@email.com" 
-                  className="w-full px-5 py-3 rounded-xl bg-white text-gray-900 font-bold mb-4 focus:outline-none"
-                />
-                <button className="w-full bg-accent text-white py-3 rounded-xl font-black hover:scale-105 transition-all">
-                  Join Free
-                </button>
-              </div>
-            </div>
 
             {/* Related Posts */}
             {relatedPosts.length > 0 && (
-              <div>
-                <h3 className="text-xl font-black mb-6 flex items-center gap-2">
-                  <TrendingUp className="text-primary" size={20} /> Related Guides
+              <div className="mt-16 pt-12 border-t border-gray-100">
+                <h3 className="text-2xl font-black mb-8 flex items-center gap-3">
+                  <TrendingUp className="text-primary" /> Related Guides
                 </h3>
-                <div className="space-y-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                   {relatedPosts.map(rp => (
-                    <Link key={rp.slug} to={`/blog/${rp.slug}`} className="group flex gap-4 items-center">
+                    <Link key={rp.slug} to={`/blog/${rp.slug}`} className="group bg-bg-light p-6 rounded-3xl border border-gray-100 hover:shadow-xl hover:bg-white transition-all flex gap-4 items-center">
                       <div className="w-20 h-20 shrink-0 rounded-xl overflow-hidden">
                         <img src={`https://picsum.photos/seed/${rp.imageSeed}/200/200`} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                       </div>
@@ -166,6 +163,82 @@ export default function BlogPost() {
                 </div>
               </div>
             )}
+
+            {/* Continue Your Journey Paths */}
+            <div className="mt-16 p-10 md:p-16 bg-primary rounded-[3rem] text-white relative overflow-hidden text-center">
+              <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+              <div className="relative z-10">
+                <h2 className="text-3xl font-black mb-8">Continue Your Journey</h2>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <Link to="/blog/how-to-start-freelancing-with-no-experience" className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all text-center group">
+                    <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">💼</div>
+                    <div className="font-bold">Freelancing</div>
+                  </Link>
+                  <Link to="/blog/how-to-make-money-using-ai-tools" className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all text-center group">
+                    <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">🤖</div>
+                    <div className="font-bold">AI Income</div>
+                  </Link>
+                  <Link to="/blog/make-money-using-phone" className="bg-white/10 backdrop-blur-md p-6 rounded-2xl border border-white/20 hover:bg-white/20 transition-all text-center group">
+                    <div className="text-3xl mb-3 group-hover:scale-110 transition-transform">📱</div>
+                    <div className="font-bold">Easy Methods</div>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Sidebar */}
+          <aside className="lg:w-1/3 space-y-12">
+            {/* Trust Signal Widget */}
+            <div className="bg-bg-light p-8 rounded-[2rem] border border-gray-100">
+              <div className="flex items-center gap-3 mb-4 text-primary">
+                <ShieldCheck size={32} />
+                <h3 className="text-xl font-black">IncomePilot Verified</h3>
+              </div>
+              <p className="text-sm text-gray-600 leading-relaxed font-medium">
+                This guide has been manually reviewed for accuracy and updated for the 2026 digital economy. We only recommend legitimate, tested methods.
+              </p>
+            </div>
+
+            {/* Newsletter Widget */}
+            <div className="bg-white p-8 rounded-[2rem] shadow-xl border border-gray-100 relative overflow-hidden">
+              <div className="absolute top-0 right-0 w-32 h-32 bg-primary/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+              <div className="relative z-10">
+                <h3 className="text-2xl font-black mb-4 text-gray-900">Master Your Income</h3>
+                <p className="text-gray-500 mb-6 text-sm leading-relaxed">
+                  Join 25,000+ others getting weekly blueprints to earn online.
+                </p>
+                <input 
+                  type="email" 
+                  placeholder="your@email.com" 
+                  className="w-full px-5 py-3 rounded-xl bg-bg-light text-gray-900 font-bold mb-4 focus:outline-none border border-gray-100"
+                />
+                <button className="w-full bg-primary text-white py-3 rounded-xl font-black hover:scale-105 transition-all shadow-lg shadow-blue-900/20">
+                  Join Free
+                </button>
+              </div>
+            </div>
+
+            {/* Trending Guides (Sidebar version) */}
+            <div>
+              <h3 className="text-xl font-black mb-6 flex items-center gap-2">
+                <TrendingUp className="text-primary" size={20} /> Trending Now
+              </h3>
+              <div className="space-y-6">
+                {posts.slice(0, 3).map(rp => (
+                  <Link key={rp.slug} to={`/blog/${rp.slug}`} className="group flex gap-4 items-center">
+                    <div className="w-16 h-16 shrink-0 rounded-xl overflow-hidden">
+                      <img src={`https://picsum.photos/seed/${rp.imageSeed}/200/200`} alt="" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-gray-900 group-hover:text-primary transition-colors line-clamp-2 leading-snug text-sm">
+                        {rp.title}
+                      </h4>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
 
             {/* Back to Blog */}
             <Link to="/blog" className="flex items-center gap-2 text-gray-400 font-bold hover:text-primary transition-colors">

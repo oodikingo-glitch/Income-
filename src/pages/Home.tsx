@@ -114,25 +114,25 @@ export default function Home() {
       </div>
 
       {/* SECTION 2 — START YOUR INCOME JOURNEY (START HERE) */}
-      <section className="py-24 px-4 bg-bg-light relative">
+      <section className="py-32 px-4 bg-bg-light relative">
         <div className="absolute top-0 left-0 w-full h-32 bg-gradient-to-b from-primary to-transparent opacity-5"></div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="text-center max-w-4xl mx-auto mb-20">
+          <div className="text-center max-w-4xl mx-auto mb-24">
             <motion.div 
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              className="inline-flex items-center gap-3 bg-primary text-white px-6 py-2 rounded-full font-black uppercase tracking-[0.3em] text-sm mb-8 shadow-xl shadow-blue-900/20"
+              className="inline-flex items-center gap-3 bg-primary text-white px-6 py-2 rounded-full font-black uppercase tracking-[0.3em] text-sm mb-10 shadow-xl shadow-blue-900/20"
             >
               <Rocket size={20} className="animate-bounce" /> Start Here
             </motion.div>
-            <h2 className="text-5xl md:text-7xl font-black mb-8 tracking-tight text-gray-900">Choose Your Path to Freedom</h2>
+            <h2 className="text-5xl md:text-7xl font-black mb-10 tracking-tight text-gray-900">Choose Your Path to Freedom</h2>
             <p className="text-xl md:text-2xl text-gray-600 font-medium leading-relaxed">
               Don't get overwhelmed. Pick <span className="text-primary font-black">ONE</span> path below and follow our verified, step-by-step blueprint to your first $1,000 online.
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
             {/* Path 1: Freelancing Path */}
             <motion.div 
               initial={{ opacity: 0, y: 40 }}
@@ -149,7 +149,7 @@ export default function Home() {
               <p className="text-gray-600 mb-10 flex-grow leading-relaxed text-lg relative z-10">Trade your skills for dollars. Best for those who want to reach <span className="font-bold text-gray-900">$2,000+/month</span> quickly.</p>
               <Link 
                 to="/blog/how-to-start-freelancing-with-no-experience" 
-                className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-secondary transition-all w-full shadow-xl shadow-blue-900/30 relative z-10 flex items-center justify-center gap-2 group/btn"
+                className="bg-primary text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-secondary hover:scale-105 transition-all w-full shadow-xl shadow-blue-900/30 relative z-10 flex items-center justify-center gap-2 group/btn"
               >
                 Start Freelancing <ArrowRight className="group-hover/btn:translate-x-2 transition-transform" />
               </Link>
@@ -193,7 +193,7 @@ export default function Home() {
               <p className="text-gray-600 mb-10 flex-grow leading-relaxed text-lg relative z-10">Simple tasks using your phone. Best for <span className="font-bold text-gray-900">absolute beginners</span> who want a quick win.</p>
               <Link 
                 to="/blog/make-money-using-phone" 
-                className="bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-green-700 transition-all w-full shadow-xl shadow-green-900/30 relative z-10 flex items-center justify-center gap-2 group/btn"
+                className="bg-green-600 text-white px-10 py-5 rounded-2xl font-black text-xl hover:bg-green-700 hover:scale-105 transition-all w-full shadow-xl shadow-green-900/30 relative z-10 flex items-center justify-center gap-2 group/btn"
               >
                 Start Now <ArrowRight className="group-hover/btn:translate-x-2 transition-transform" />
               </Link>
